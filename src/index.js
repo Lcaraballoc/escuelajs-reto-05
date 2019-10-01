@@ -19,6 +19,7 @@ const getData = api => {
       newItem.classList.add('Items');
       newItem.innerHTML = output;
       $app.appendChild(newItem);
+      localStorage.setItem("next_fetch", response.info.next)
     })
     .catch(error => console.log(error));
 }
